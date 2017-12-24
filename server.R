@@ -1,3 +1,4 @@
+# load packages
 library(shiny)
 library(purrr)
 library(stringi)
@@ -15,13 +16,13 @@ library(igraph)
 library(plotrix)
 library(googleVis)
 
-
 # load datasets
 load(file = "./data/all_cardiovascular_case_reports.Rdata") # all cardiovascular case reports
 load(file = "./data/cv_MH.Rdata") # all cardiovascular MeSH terms
 load(file = "./data/named_RN.Rdata") # all RN terms
 load(file = "./data/final_RN.Rdata") # all cardiovascular case reports for RN
 
+# back-end code goes here
 server <- function(input, output)
 {
   output$text1 <- renderText({
@@ -370,9 +371,9 @@ server <- function(input, output)
       return(a)
     })
     
-      
     
     
+    # do for RN terms
     df_RN <- reactive({
       # uses user's search
       result <- df()
@@ -385,7 +386,6 @@ server <- function(input, output)
       
       # find occurrences of initial dataframe
       named_RN$search <- map_int(named_RN$V1, function(x){sum(str_detect(result_MH, fixed(x)))})
-      
       
       
       # cleans into a vector
