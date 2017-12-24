@@ -2,14 +2,14 @@
 This was the main project I tackled Summer of 2017 at my internship at HeartBD2K, which resulted in an R Shiny App. This project was essentially a culmination of my summer internship. This site allows a clinician, for instance, to compare two different demographics and find which drugs (RN terms) and MeSH terms (which include phrases such as diseases, demographics, and symptoms) are most statistically distinct between each demographic. The purpose of this project was to centralize all of the back-end analyzing, instead of manually running scrips for each demographic of interest.
 
 ## Content
-The resulting website includes the following tabs
+The resulting website includes the following tabs, which I have included in the screenshots folder
 - *Home* to input the two demographics as well as more information about the project
 - *Heat Maps* to show which MesH and RN terms are statistically distinct between each demographic and by how much
 - *Tree Maps* to represent the top MeSH terms within each demographic by size and color (color represents the distinctness to that search)
 - *PCA Plots* to spatially visualize how similar each MeSH term is to each other within each demographic
 - *Correlation Plots* to demonstrate how MeSH terms are correlated within each demographic
 
-I have included screenshots of the website of each tab in the `screenshots` folder.
+Besides the screenshots, I have included the R code, as well as a presentation that I had the honor of presenting. Note that this presentation was created before the R Shiny app was made, but it still contains all the features of the R Shiny app.
 
 ## Future Work
 This project is unfortunately not yet complete, however still functional. This is, essentially, my to-do list:
