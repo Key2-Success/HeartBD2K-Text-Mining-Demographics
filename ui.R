@@ -1,3 +1,4 @@
+# load all packages
 library(shiny)
 library(stringr)
 library(stringi)
@@ -15,16 +16,17 @@ library(igraph)
 library(plotrix)
 library(googleVis)
 
-
 # load datasets
 load(file = "./data/all_cardiovascular_case_reports.Rdata") # all cardiovascular case reports
 load(file = "./data/cv_MH.Rdata") # all cardiovascular MeSH terms
 
+# use a theme for webpage
 ui <- fluidPage(theme = "bootstrap.css",
 
-titlePanel("Associations in MeSH and RN (drug) terms between two population groups"), br(), 
+    titlePanel("Associations in MeSH and RN (drug) terms between two population groups"), br(), 
       tabsetPanel(
         tabPanel("Home", sidebarLayout(sidebarPanel(
+        
           textInput(inputId = "phrases",
                     label = "Please enter all the MeSH terms for your first search, each separated by a comma:",
                     value = ""),
@@ -91,7 +93,8 @@ titlePanel("Associations in MeSH and RN (drug) terms between two population grou
                           max = 30),
 
               helpText("10 or 12 is standard. Any more, and the graphic will become too cluttered.")),
-          mainPanel(
+          
+        mainPanel(
           textOutput("text1"), textOutput("text2"), br(), 
           p("These heat maps are useful in determining the most distinct MeSH or RN terms between each group you searched. In order to interpret the results,
                    you may simply dictate: 'The MeSH term (a) is (b) times more prevalent in case reports concerning (d) than in case reports concerning (d)', 
