@@ -9,7 +9,7 @@ The resulting website includes the following tabs, which I have included in the 
 - *PCA Plots* to spatially visualize how similar each MeSH term is to each other within each demographic
 - *Correlation Plots* to demonstrate how MeSH terms are correlated within each demographic
 
-Besides the screenshots, I have included the R code, as well as a presentation that I had the honor of presenting. Note that this presentation was created before the R Shiny app was made, but it still contains all the features of the R Shiny app.
+Besides the screenshots, I have included the R code, as well as a presentation that I had the honor of presenting, under the supervision of John (Harry) Caufield. Note that this presentation was created before the R Shiny app was made, but it still contains all the features of the R Shiny app.
 
 ## Future Work
 This project is unfortunately not yet complete, however still functional. This is, essentially, my to-do list:
